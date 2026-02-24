@@ -71,6 +71,7 @@ Le tableau ci-dessous présente les données nécessaires au fonctionnement du s
 | Pseudonyme utilisateur       | Texte      | 50     |
 | Identifiant livre            | Entier     | 10     |
 | Titre livre                  | Texte      | 150    |
+| auteur livre                 | Texte      | 100    |
 | Description livre            | Texte long | 1000   |
 | Date publication livre       | Date       | -      |
 | Langue livre                 | Texte      | 30     |
@@ -85,6 +86,5 @@ Le tableau ci-dessous présente les données nécessaires au fonctionnement du s
 | Date note                    | Date       | -      |
 | Identifiant favori           | Entier     | 10     |
 | Date ajout favori            | Date       | -      |
-| Identifiant suivi            | Entier     | 10     |
 | Date suivi                   | Date       | -      |
 
