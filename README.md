@@ -1,4 +1,4 @@
-Prompt utiilser: 
+Prompt : 
 
 Tu travailles dans le domaine du livre. 
 Ta bibliothèque a comme activité d’offrir un service. 
@@ -17,9 +17,9 @@ Fournis donc les règles de gestion et le dictionnaire de données.
 1. Règles de gestion de la bibliothèque numérique
 
 La bibliothèque est un service de lecture en ligne inspiré de plateformes telles que WEBTOON, WEBCOMICS et WATTPAD.
-Elle permet aux utilisateurs inscrits de consulter des livres organisés par catégories et composés de chapitres:
+Elle permet aux utilisateurs inscrits de consulter des livres organisés par catégories :
 
-Gestion des utilisateurs:
+* Gestion des utilisateurs:
 
 -Un utilisateur doit créer un compte pour accéder au service.
 -Chaque utilisateur possède un identifiant unique.
@@ -29,45 +29,38 @@ Gestion des utilisateurs:
 -Un utilisateur peut ajouter un livre à ses favoris.
 -Un utilisateur peut noter un livre.
 -Une note attribuée est comprise entre 1 et 5.
--Un utilisateur peut commenter un chapitre.
+-Un utilisateur peut commenter un livre.
 -Un utilisateur peut suivre d’autres utilisateurs (relation sociale).
 
-Gestion des livres:
-
+* Gestion des livres:
+  
 -Chaque livre possède un identifiant unique.
 -Un livre possède un titre, une description, une langue et une date de publication.
 -Un livre appartient à au moins une catégorie.
 -Un livre peut appartenir à plusieurs catégories.
 -Un livre peut être actif ou retiré du catalogue.
--Un livre est composé d’un ou plusieurs chapitres.
 -Un livre peut recevoir plusieurs notes et commentaires.
 
-Gestion des catégories:
+* Gestion des catégories:
 
 -Chaque catégorie possède un identifiant unique.
 -Une catégorie peut contenir plusieurs livres.
 
-Gestion des chapitres:
+* Gestion des commentaires:
 
--Chaque chapitre possède un identifiant unique.
--Un chapitre appartient obligatoirement à un seul livre.
--Un chapitre possède un numéro d’ordre.
--Un chapitre possède un titre et un contenu.
-
-Gestion des commentaires:
-
--Un commentaire est associé à un utilisateur et à un chapitre.
+-Un commentaire est associé à un utilisateur et à un livre.
 -Un commentaire possède un contenu et une date.
 -Un utilisateur peut publier plusieurs commentaires.
 
-Gestion des notes:
+* Gestion des notes:
+
 -Une note est associée à un utilisateur et à un livre.
 -Un utilisateur ne peut attribuer qu’une seule note par livre.
 
 2. Dictionnaire de données brutes
 Le tableau ci-dessous présente les données nécessaires au fonctionnement du système, sans présumer de leur organisation future dans les tables:
 
-| Signification de la donnée   | Type       | Taille |
+| Signification                | Type       | Taille |
 | ---------------------------- | ---------- | ------ |
 | Identifiant utilisateur      | Entier     | 10     |
 | Nom utilisateur              | Texte      | 50     |
@@ -75,6 +68,7 @@ Le tableau ci-dessous présente les données nécessaires au fonctionnement du s
 | Email utilisateur            | Texte      | 100    |
 | Mot de passe utilisateur     | Texte      | 255    |
 | Date inscription utilisateur | Date       | -      |
+| Pseudonyme utilisateur       | Texte      | 50     |
 | Identifiant livre            | Entier     | 10     |
 | Titre livre                  | Texte      | 150    |
 | Description livre            | Texte long | 1000   |
@@ -83,10 +77,6 @@ Le tableau ci-dessous présente les données nécessaires au fonctionnement du s
 | Statut livre                 | Texte      | 20     |
 | Identifiant catégorie        | Entier     | 10     |
 | Nom catégorie                | Texte      | 50     |
-| Identifiant chapitre         | Entier     | 10     |
-| Numéro ordre chapitre        | Entier     | 5      |
-| Titre chapitre               | Texte      | 150    |
-| Contenu chapitre             | Texte long | 5000   |
 | Identifiant commentaire      | Entier     | 10     |
 | Contenu commentaire          | Texte long | 500    |
 | Date commentaire             | Date       | -      |
@@ -97,5 +87,4 @@ Le tableau ci-dessous présente les données nécessaires au fonctionnement du s
 | Date ajout favori            | Date       | -      |
 | Identifiant suivi            | Entier     | 10     |
 | Date suivi                   | Date       | -      |
-| Rôle utilisateur             | Texte      | 20     |
-| Pseudonyme utilisateur       | Texte      | 50     |
+
