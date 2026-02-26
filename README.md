@@ -57,6 +57,18 @@ Elle permet aux utilisateurs inscrits de consulter des livres organisés par cat
 -Une note est associée à un utilisateur et à un livre.
 -Un utilisateur ne peut attribuer qu’une seule note par livre.
 
+* Gestion des bibliothèques
+
+-La bibliothèque numérique comprend plusieurs bibliothèques physiques.
+-Chaque bibliothèque possède un identifiant unique.
+-Une bibliothèque possède un nom, une adresse, une ville et un code postal.
+-Une bibliothèque peut gérer plusieurs réservations.
+-Une réservation est effectuée par un utilisateur pour un livre dans une bibliothèque donnée.
+-Une réservation possède une date de réservation, une date de retour prévue et un statut.
+-Un utilisateur peut effectuer plusieurs réservations.
+-Un livre peut être réservé plusieurs fois dans le temps.
+-Une réservation concerne un seul utilisateur, un seul livre et une seule bibliothèque.
+
 2. Dictionnaire de données brutes
 Le tableau ci-dessous présente les données nécessaires au fonctionnement du système, sans présumer de leur organisation future dans les tables:
 
