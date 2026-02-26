@@ -86,5 +86,16 @@ Le tableau ci-dessous présente les données nécessaires au fonctionnement du s
 | Date note                    | Date       | -      |
 | Identifiant favori           | Entier     | 10     |
 | Date ajout favori            | Date       | -      |
-| Date suivi                   | Date       | -      |
+| Identifiant bibliothèque     | Entier     | -      |
+| Nom bibliothèque             | Date       | -      |
+| Adresse bibliothèque         | Date       | -      |
+| Ville bibliothèque           | Date       | -      |
+| Code postal bibliothèque     | Entier     | -      |
+| Email bibliothèque           | Date       | -      |
+| Téléphone bibliothèque       | Entier     | -      |
+| Date réservation             | Date       | -      |
+| Date retour prévue           | Date       | -      |
+| Statut réservation           | Date       | -      |
+| Date suivi                   | Entier     | -      |
+
 
