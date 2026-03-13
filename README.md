@@ -111,14 +111,23 @@ Le tableau ci-dessous présente les données nécessaires au fonctionnement du s
 | Date suivi                   | Entier     | -      |
 
 MLD : 
+
 Utilisateur = (U_ID INT, U_prenom VARCHAR(50), U_email VARCHAR(50), U_MDP VARCHAR(50), U_date_inscription DATE, U_pseudo VARCHAR(50), U_nom VARCHAR(50));
+
 Categorie = (C_ID INT, C_nom VARCHAR(50));
+
 Commentaire = (Com_ID INT, Com_commentaire VARCHAR(50), Com_date VARCHAR(50), #U_ID);
+
 favori = (F_ID INT, F_date DATE, #U_ID);
+
 Bibliotheque_ = (B_id INT, B_ville VARCHAR(50), B_codepostale BYTE, B_telephone SMALLINT, B_nom VARCHAR(50), B_email VARCHAR(50), B_adresse VARCHAR(50));
+
 Livre = (L_ID INT, L_titre VARCHAR(50), L_description VARCHAR(50), L_publication DATE, L_langue VARCHAR(50), L_status VARCHAR(50), L_auteur VARCHAR(50), #U_ID, #B_id);
+
 Note = (N_ID INT, N_valeur INT, N_date DATE, #L_ID, #Com_ID, #U_ID);
+
 classer = (#L_ID, #C_ID);
+
 follow = (#U_ID, #U_ID_1, follow_date DATE);
 
 
