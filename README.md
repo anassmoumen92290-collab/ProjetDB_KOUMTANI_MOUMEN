@@ -130,4 +130,25 @@ classer = (#L_ID, #C_ID);
 
 follow = (#U_ID, #U_ID_1, follow_date DATE);
 
+## Scénario d’utilisation
+
+La base de données représente une plateforme de lecture en ligne reliée à plusieurs bibliothèques.
+
+Les utilisateurs peuvent :
+- consulter des livres
+- laisser des commentaires
+- attribuer des notes
+- suivre d'autres utilisateurs
+- ajouter des livres en favoris
+
+Le service marketing de la plateforme utilise la base de données pour analyser :
+
+- les livres les plus populaires
+- les catégories les plus consultées
+- les notes attribuées par les utilisateurs
+- l’activité des utilisateurs (commentaires, notes, favoris)
+- les relations entre utilisateurs via le système de follow
+
+Les requêtes SQL du fichier `4_interrogation.sql` permettent d’extraire ces informations afin d’aider la plateforme à améliorer ses recommandations et ses campagnes marketing.
+
 
