@@ -14,7 +14,7 @@ Il sert à fournir des informations supplémentaires sur chaque donnée (taille 
 Fournis donc les règles de gestion et le dictionnaire de données.
 
 
-1. Règles de gestion de la bibliothèque numérique
+1. Règles de gestion de la bibliothèque numérique :
 
 La bibliothèque est un service de lecture en ligne inspiré de plateformes telles que WEBTOON, WEBCOMICS et WATTPAD.
 Elle permet aux utilisateurs inscrits de consulter des livres organisés par catégories :
@@ -26,11 +26,15 @@ Elle permet aux utilisateurs inscrits de consulter des livres organisés par cat
 -L’adresse email d’un utilisateur est unique.
 -Un utilisateur possède un nom, un prénom, un email, un mot de passe et une date d’inscription.
 -Un utilisateur peut consulter plusieurs livres.
--Un utilisateur peut ajouter un livre à ses favoris.
 -Un utilisateur peut noter un livre.
 -Une note attribuée est comprise entre 1 et 5.
--Un utilisateur peut commenter un livre.
+-Un utilisateur peut publier plusieurs commentaires.
+-Un commentaire est associé à un utilisateur.
+
 -Un utilisateur peut suivre d’autres utilisateurs (relation sociale).
+-Un utilisateur peut créer plusieurs favoris.
+-Un favori possède une date d’ajout.
+-Un favori est associé à un utilisateur.
 
 * Gestion des livres:
   
@@ -48,13 +52,16 @@ Elle permet aux utilisateurs inscrits de consulter des livres organisés par cat
 
 * Gestion des commentaires:
 
--Un commentaire est associé à un utilisateur et à un livre.
+-Un commentaire est associé à un utilisateur.
 -Un commentaire possède un contenu et une date.
 -Un utilisateur peut publier plusieurs commentaires.
 
 * Gestion des notes:
 
--Une note est associée à un utilisateur et à un livre.
+-Un utilisateur peut attribuer une note.
+-Une note est donnée par un utilisateur.
+-Un livre peut recevoir plusieurs notes.
+-Une note possède une valeur comprise entre 1 et 5.
 -Un utilisateur ne peut attribuer qu’une seule note par livre.
 
 * Gestion des bibliothèques
@@ -62,12 +69,7 @@ Elle permet aux utilisateurs inscrits de consulter des livres organisés par cat
 -La bibliothèque numérique comprend plusieurs bibliothèques physiques.
 -Chaque bibliothèque possède un identifiant unique.
 -Une bibliothèque possède un nom, une adresse, une ville et un code postal.
--Une bibliothèque peut gérer plusieurs réservations.
--Une réservation est effectuée par un utilisateur pour un livre dans une bibliothèque donnée.
--Une réservation possède une date de réservation, une date de retour prévue et un statut.
--Un utilisateur peut effectuer plusieurs réservations.
--Un livre peut être réservé plusieurs fois dans le temps.
--Une réservation concerne un seul utilisateur, un seul livre et une seule bibliothèque.
+
 
 2. Dictionnaire de données brutes
 Le tableau ci-dessous présente les données nécessaires au fonctionnement du système, sans présumer de leur organisation future dans les tables:
@@ -99,35 +101,30 @@ Le tableau ci-dessous présente les données nécessaires au fonctionnement du s
 | Identifiant favori           | Entier     | 10     |
 | Date ajout favori            | Date       | -      |
 | Identifiant bibliothèque     | Entier     | -      |
-| Nom bibliothèque             | Date       | -      |
-| Adresse bibliothèque         | Date       | -      |
-| Ville bibliothèque           | Date       | -      |
+| Nom bibliothèque             | Texte      | 50     |
+| Adresse bibliothèque         | Texte      | 100    |
+| Ville bibliothèque           | Texte      | 50     |
 | Code postal bibliothèque     | Entier     | -      |
-| Email bibliothèque           | Date       | -      |
+| Email bibliothèque           | Texte      | 100    |
 | Téléphone bibliothèque       | Entier     | -      |
 | Date réservation             | Date       | -      |
 | Date retour prévue           | Date       | -      |
-| Statut réservation           | Date       | -      |
-| Date suivi                   | Entier     | -      |
+| Date suivi                   | Date       | -      |
+
+MCD : 
+
+
 
 MLD : 
 
 Utilisateur = (U_ID INT, U_prenom VARCHAR(50), U_email VARCHAR(50), U_MDP VARCHAR(50), U_date_inscription DATE, U_pseudo VARCHAR(50), U_nom VARCHAR(50));
-
 Categorie = (C_ID INT, C_nom VARCHAR(50));
-
 Commentaire = (Com_ID INT, Com_commentaire VARCHAR(50), Com_date VARCHAR(50), #U_ID);
-
 favori = (F_ID INT, F_date DATE, #U_ID);
-
 Bibliotheque_ = (B_id INT, B_ville VARCHAR(50), B_codepostale BYTE, B_telephone SMALLINT, B_nom VARCHAR(50), B_email VARCHAR(50), B_adresse VARCHAR(50));
-
 Livre = (L_ID INT, L_titre VARCHAR(50), L_description VARCHAR(50), L_publication DATE, L_langue VARCHAR(50), L_status VARCHAR(50), L_auteur VARCHAR(50), #U_ID, #B_id);
-
 Note = (N_ID INT, N_valeur INT, N_date DATE, #L_ID, #Com_ID, #U_ID);
-
 classer = (#L_ID, #C_ID);
-
 follow = (#U_ID, #U_ID_1, follow_date DATE);
 
 ## Scénario d’utilisation
