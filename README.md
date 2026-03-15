@@ -22,53 +22,84 @@ Elle permet aux utilisateurs inscrits de consulter des livres organisés par cat
 * Gestion des utilisateurs:
 
 -Un utilisateur doit créer un compte pour accéder au service.
+
 -Chaque utilisateur possède un identifiant unique.
+
 -L’adresse email d’un utilisateur est unique.
+
 -Un utilisateur possède un nom, un prénom, un email, un mot de passe et une date d’inscription.
+
 -Un utilisateur peut consulter plusieurs livres.
+
 -Un utilisateur peut noter un livre.
+
 -Une note attribuée est comprise entre 1 et 5.
+
 -Un utilisateur peut publier plusieurs commentaires.
+
 -Un commentaire est associé à un utilisateur.
 
 -Un utilisateur peut suivre d’autres utilisateurs (relation sociale).
+
 -Un utilisateur peut créer plusieurs favoris.
+
 -Un favori possède une date d’ajout.
+
 -Un favori est associé à un utilisateur.
+
 
 * Gestion des livres:
   
 -Chaque livre possède un identifiant unique.
+
 -Un livre possède un titre, une description, une langue et une date de publication.
+
 -Un livre appartient à au moins une catégorie.
+
 -Un livre peut appartenir à plusieurs catégories.
+
 -Un livre peut être actif ou retiré du catalogue.
+
 -Un livre peut recevoir plusieurs notes et commentaires.
+
 
 * Gestion des catégories:
 
 -Chaque catégorie possède un identifiant unique.
+
 -Une catégorie peut contenir plusieurs livres.
+
 
 * Gestion des commentaires:
 
 -Un commentaire est associé à un utilisateur.
+
 -Un commentaire possède un contenu et une date.
+
 -Un utilisateur peut publier plusieurs commentaires.
+
 
 * Gestion des notes:
 
 -Un utilisateur peut attribuer une note.
+
 -Une note est donnée par un utilisateur.
+
 -Un livre peut recevoir plusieurs notes.
+
 -Une note possède une valeur comprise entre 1 et 5.
+
 -Un utilisateur ne peut attribuer qu’une seule note par livre.
+
 
 * Gestion des bibliothèques
 
 -La bibliothèque numérique comprend plusieurs bibliothèques physiques.
+
 -Chaque bibliothèque possède un identifiant unique.
+
 -Une bibliothèque possède un nom, une adresse, une ville et un code postal.
+
 
 
 2. Dictionnaire de données brutes
