@@ -99,8 +99,6 @@ Elle permet aux utilisateurs inscrits de consulter des livres organisés par cat
 
 -Une note possède une valeur comprise entre 1 et 5.
 
--Un utilisateur ne peut attribuer qu’une seule note par livre.
-
 
 
 
