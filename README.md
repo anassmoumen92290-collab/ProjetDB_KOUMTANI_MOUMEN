@@ -19,6 +19,8 @@ Fournis donc les règles de gestion et le dictionnaire de données.
 La bibliothèque est un service de lecture en ligne inspiré de plateformes telles que WEBTOON, WEBCOMICS et WATTPAD.
 Elle permet aux utilisateurs inscrits de consulter des livres organisés par catégories :
 
+
+
 * Gestion des utilisateurs:
 
 -Un utilisateur doit créer un compte pour accéder au service.
@@ -48,6 +50,8 @@ Elle permet aux utilisateurs inscrits de consulter des livres organisés par cat
 -Un favori est associé à un utilisateur.
 
 
+
+
 * Gestion des livres:
   
 -Chaque livre possède un identifiant unique.
@@ -63,11 +67,15 @@ Elle permet aux utilisateurs inscrits de consulter des livres organisés par cat
 -Un livre peut recevoir plusieurs notes et commentaires.
 
 
+
+
 * Gestion des catégories:
 
 -Chaque catégorie possède un identifiant unique.
 
 -Une catégorie peut contenir plusieurs livres.
+
+
 
 
 * Gestion des commentaires:
@@ -77,6 +85,8 @@ Elle permet aux utilisateurs inscrits de consulter des livres organisés par cat
 -Un commentaire possède un contenu et une date.
 
 -Un utilisateur peut publier plusieurs commentaires.
+
+
 
 
 * Gestion des notes:
@@ -92,6 +102,8 @@ Elle permet aux utilisateurs inscrits de consulter des livres organisés par cat
 -Un utilisateur ne peut attribuer qu’une seule note par livre.
 
 
+
+
 * Gestion des bibliothèques
 
 -La bibliothèque numérique comprend plusieurs bibliothèques physiques.
@@ -99,6 +111,8 @@ Elle permet aux utilisateurs inscrits de consulter des livres organisés par cat
 -Chaque bibliothèque possède un identifiant unique.
 
 -Une bibliothèque possède un nom, une adresse, une ville et un code postal.
+
+
 
 
 
