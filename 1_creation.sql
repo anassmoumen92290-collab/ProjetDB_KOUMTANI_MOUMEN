@@ -39,7 +39,7 @@ CREATE TABLE favori(
 CREATE TABLE Bibliotheque_(
    B_id INT,
    B_ville VARCHAR(50),
-   B_codepostale BYTE,
+   B_codepostale INT,
    B_telephone SMALLINT,
    B_nom VARCHAR(50),
    B_email VARCHAR(50),
