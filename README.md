@@ -1,4 +1,4 @@
-Prompt : 
+## Prompt : 
 
 Tu travailles dans le domaine du livre. 
 Ta bibliothèque a comme activité d’offrir un service. 
@@ -14,7 +14,7 @@ Il sert à fournir des informations supplémentaires sur chaque donnée (taille 
 Fournis donc les règles de gestion et le dictionnaire de données.
 
 
-1. Règles de gestion de la bibliothèque numérique :
+## Règles de gestion de la bibliothèque numérique :
 
 La bibliothèque est un service de lecture en ligne inspiré de plateformes telles que WEBTOON, WEBCOMICS et WATTPAD.
 Elle permet aux utilisateurs inscrits de consulter des livres organisés par catégories :
@@ -114,7 +114,7 @@ Elle permet aux utilisateurs inscrits de consulter des livres organisés par cat
 
 
 
-2. Dictionnaire de données brutes
+## Dictionnaire de données brutes
 Le tableau ci-dessous présente les données nécessaires au fonctionnement du système, sans présumer de leur organisation future dans les tables:
 
 | Signification                | Type       | Taille |
@@ -152,11 +152,11 @@ Le tableau ci-dessous présente les données nécessaires au fonctionnement du s
 | Téléphone bibliothèque       | Entier     | -      |
 | Date suivi                   | Date       | -      |
 
-MCD : 
+##MCD : 
 
 ![MCD](./MCD_F.png)
 
-MLD : 
+##MLD : 
 
 Utilisateur = (U_ID INT, U_prenom VARCHAR(50), U_email VARCHAR(50), U_MDP VARCHAR(50), U_date_inscription DATE, U_pseudo VARCHAR(50), U_nom VARCHAR(50));
 
@@ -175,6 +175,44 @@ Note = (N_ID INT, N_valeur INT, N_date DATE, #L_ID, #Com_ID, #U_ID);
 classer = (#L_ID, #C_ID);
 
 follow = (#U_ID, #U_ID_1, follow_date DATE);
+
+##Prompt utilisé pour générer les données
+
+Tu travailles dans le domaine du livre.
+
+Ta bibliothèque a comme activité d’offrir un service de lecture en ligne.
+
+C’est une bibliothèque similaire à une bibliothèque publique comme la bibliothèque de Paris. Les livres disponibles peuvent être par exemple : La vie du prophète, L’histoire du Maroc avant l’indépendance, Le Saint Coran, Le mariage du petit Riad, Kara et la belle, Eloi et le kung-fu.
+
+Inspire-toi également de plateformes de lecture en ligne telles que WEBTOON, WEBCOMICS ou WATTPAD, où les utilisateurs peuvent lire des livres, commenter et interagir.
+
+La bibliothèque souhaite appliquer la méthode MERISE afin de concevoir son système d’information.
+
+Tu es chargé de la partie analyse, c’est-à-dire de collecter les besoins auprès de l’organisation.
+
+L’entreprise a fait appel à un étudiant en ingénierie informatique pour réaliser ce projet. Tu dois lui fournir toutes les informations nécessaires afin qu’il puisse ensuite concevoir et développer la base de données.
+
+Dans un premier temps, établis les règles de gestion des données de la bibliothèque sous forme de liste à puces.
+
+Ces règles doivent correspondre aux informations que fournirait une personne qui connaît le fonctionnement de l’organisation, mais pas nécessairement la conception d’un système d’information.
+
+Ensuite, à partir de ces règles, fournis un dictionnaire de données brutes sous forme de tableau avec les colonnes suivantes :
+
+signification de la donnée
+
+type
+
+taille en nombre de caractères ou de chiffres
+
+Le dictionnaire doit contenir entre 25 et 35 données.
+
+Il sert uniquement à fournir des informations sur les données nécessaires au système, sans supposer encore leur organisation future dans les tables.
+
+Fournis donc :
+
+les règles de gestion
+
+le dictionnaire de données
 
 ## Scénario d’utilisation
 
