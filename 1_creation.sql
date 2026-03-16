@@ -1,5 +1,5 @@
-CREATE DATABASE bibliotheque;
-USE bibliotheque;
+CREATE DATABASE BB;
+USE BB;
 
 CREATE TABLE Utilisateur(
    U_ID INT,
@@ -36,11 +36,11 @@ CREATE TABLE favori(
    FOREIGN KEY(U_ID) REFERENCES Utilisateur(U_ID)
 );
 
-CREATE TABLE Bibliotheque_(
+CREATE TABLE Bibliotheque(
    B_id INT,
    B_ville VARCHAR(50),
    B_codepostale INT,
-   B_telephone SMALLINT,
+   B_telephone INT,
    B_nom VARCHAR(50),
    B_email VARCHAR(50),
    B_adresse VARCHAR(50),
@@ -59,7 +59,7 @@ CREATE TABLE Livre(
    B_id INT NOT NULL,
    PRIMARY KEY(L_ID),
    FOREIGN KEY(U_ID) REFERENCES Utilisateur(U_ID),
-   FOREIGN KEY(B_id) REFERENCES Bibliotheque_(B_id)
+   FOREIGN KEY(B_id) REFERENCES Bibliotheque(B_id)
 );
 
 CREATE TABLE Note(
