@@ -69,7 +69,7 @@ JOIN Utilisateur U ON L.U_ID = U.U_ID;
 -- 12. afficher les livres avec leur bibliothèque
 SELECT L.L_titre, B.B_nom
 FROM Livre L
-JOIN Bibliotheque_ B ON L.B_id = B.B_id;
+JOIN Bibliotheque B ON L.B_id = B.B_id;
 
 -- 13. afficher les commentaires avec leur utilisateur
 SELECT C.Com_commentaire, U.U_pseudo
