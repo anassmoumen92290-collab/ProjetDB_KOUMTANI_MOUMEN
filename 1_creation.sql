@@ -22,7 +22,7 @@ CREATE TABLE Categorie(
 CREATE TABLE Commentaire(
    Com_ID INT,
    Com_commentaire VARCHAR(50),
-   Com_date VARCHAR(50),
+   Com_date DATE,
    U_ID INT NOT NULL,
    PRIMARY KEY(Com_ID),
    FOREIGN KEY(U_ID) REFERENCES Utilisateur(U_ID)
