@@ -49,10 +49,3 @@ ALTER TABLE Utilisateur
 ADD CONSTRAINT unique_pseudo
 UNIQUE (U_pseudo);
 
--- ======================================
--- FOLLOW : PAS SE SUIVRE SOI MEME
--- ======================================
-
-ALTER TABLE follow
-ADD CONSTRAINT follow_self_check
-CHECK (U_ID <> U_ID_1);
