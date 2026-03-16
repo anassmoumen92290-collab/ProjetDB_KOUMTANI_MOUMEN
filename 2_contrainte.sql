@@ -1,4 +1,5 @@
-USE bibliotheque;
+
+USE BB;
 
 -- ======================================
 -- EMAIL UNIQUE
@@ -55,19 +56,3 @@ UNIQUE (U_pseudo);
 ALTER TABLE follow
 ADD CONSTRAINT follow_self_check
 CHECK (U_ID <> U_ID_1);
-
--- ======================================
--- DATE COMMENTAIRE
--- ======================================
-
-ALTER TABLE Commentaire
-ADD CONSTRAINT commentaire_date_check
-CHECK (Com_date <= CURDATE());
-
--- ======================================
--- DATE NOTE
--- ======================================
-
-ALTER TABLE Note
-ADD CONSTRAINT note_date_check
-CHECK (N_date <= CURDATE());
