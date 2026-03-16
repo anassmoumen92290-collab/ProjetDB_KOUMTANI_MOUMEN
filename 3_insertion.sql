@@ -1,4 +1,4 @@
-USE bibliotheque;
+USE BB;
 
 -- =========================
 -- CATEGORIES
@@ -16,7 +16,7 @@ INSERT INTO Categorie VALUES
 -- BIBLIOTHEQUES
 -- =========================
 
-INSERT INTO Bibliotheque_ VALUES
+INSERT INTO Bibliotheque VALUES
 (1,'Paris',75001,123456789,'Bibliotheque Centrale','contact@biblio-paris.fr','10 rue de Rivoli'),
 (2,'Lyon',69001,234567890,'Bibliotheque Lyon Centre','contact@biblio-lyon.fr','5 place Bellecour'),
 (3,'Marseille',13001,345678901,'Bibliotheque Marseille','contact@biblio-mrs.fr','20 vieux port'),
