@@ -17,14 +17,6 @@ ADD CONSTRAINT note_valeur_check
 CHECK (N_valeur BETWEEN 1 AND 5);
 
 -- ======================================
--- DATE INSCRIPTION VALIDE
--- ======================================
-
-ALTER TABLE Utilisateur
-ADD CONSTRAINT date_inscription_check
-CHECK (U_date_inscription <= CURRENT_DATE);
-
--- ======================================
 -- STATUT LIVRE
 -- ======================================
 
