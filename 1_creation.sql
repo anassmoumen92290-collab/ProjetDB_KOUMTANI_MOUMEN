@@ -1,3 +1,6 @@
+CREATE DATABASE bibliotheque;
+USE bibliotheque;
+
 CREATE TABLE Utilisateur(
    U_ID INT,
    U_prenom VARCHAR(50),
