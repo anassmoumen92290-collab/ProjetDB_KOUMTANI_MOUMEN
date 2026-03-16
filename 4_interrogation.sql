@@ -1,4 +1,4 @@
-USE bibliotheque;
+USE BB;
 
 -- =========================================
 -- SELECTIONS / PROJECTIONS (5 requêtes)
