@@ -62,7 +62,7 @@ CHECK (U_ID <> U_ID_1);
 
 ALTER TABLE Commentaire
 ADD CONSTRAINT commentaire_date_check
-CHECK (Com_date <= CURRENT_DATE);
+CHECK (Com_date <= CURDATE());
 
 -- ======================================
 -- DATE NOTE
@@ -70,4 +70,4 @@ CHECK (Com_date <= CURRENT_DATE);
 
 ALTER TABLE Note
 ADD CONSTRAINT note_date_check
-CHECK (N_date <= CURRENT_DATE);
+CHECK (N_date <= CURDATE());
